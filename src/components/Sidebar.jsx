@@ -3,6 +3,10 @@ import { Stack } from '@mui/material';
 import { categories } from '../utils/constants';
 import { category } from '@mui/icons-material';
 
+
+
+const selectedCategory = 'New';
+
 const Sidebar = () => 
   (
     <Stack
@@ -16,7 +20,13 @@ const Sidebar = () =>
     >
 
         {categories.map((category) => (
-            <button>
+            <button
+              className="category-btn"
+              style={{
+                background: category.name === selectedCategory && '#FC1503',
+                color: 'white'
+              }}
+            >
                 <span>{category.icon}</span>
                 <span>{category.name}</span>
             </button>
