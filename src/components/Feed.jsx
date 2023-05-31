@@ -1,8 +1,14 @@
 import { useState , useEffect} from 'react';
 import { Box , Stack , Typography } from '@mui/material';
+
+
+import { fetchFromAPI  } from '../utils/fetchFromAPI';
 import {Sidebar, Videos } from './';
 
+
 const Feed = () => {
+    
+   useEffect
 
   return (
     <Stack sx={{ flexDirection : { sx:"column", md: "row" } }} >
